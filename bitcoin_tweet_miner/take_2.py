@@ -41,10 +41,12 @@ class StreamListener(tweepy.StreamListener):
 
 # This is a manually created filed where I stored my OAuth credentials for Twitter.
 # Each line is a key-value pair of the form: KEY_NAME:KEY
-CREDENTIALS_PATH = 'C:/Users/Finbar/Desktop/twitter_keys/keys.txt'
+# CREDENTIALS_PATH = 'C:/Users/Finbar/Desktop/twitter_keys/keys.txt'
+CREDENTIALS_PATH = 'C:/Users/t00175569/Desktop/twitter_keys/keys.txt'
 
 # Path to the list of Spanish stop words.
-STOPWORDS_ES_PATH = 'C:/Users/Finbar/Desktop/twitter_keys/keywords.txt'
+# STOPWORDS_ES_PATH = 'C:/Users/Finbar/Desktop/twitter_keys/keywords.txt'
+STOPWORDS_ES_PATH = 'C:/Users/t00175569/Desktop/twitter_keys/keywords.txt'
 
 CONSUMER_KEY = ""
 CONSUMER_SECRET = ""

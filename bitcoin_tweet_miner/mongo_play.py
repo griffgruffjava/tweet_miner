@@ -13,3 +13,8 @@ print db
 collection = db.cooltweets
 
 print collection.count()
+
+tweets_iterator = collection.find()
+for tweet in tweets_iterator:
+    tweet_text = tweet['text']
+    if
