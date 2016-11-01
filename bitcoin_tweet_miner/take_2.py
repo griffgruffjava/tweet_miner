@@ -14,8 +14,7 @@ from pymongo import MongoClient
 
 
 class StreamListener(tweepy.StreamListener):
-#tweepy.StreamListener is a class provided by tweepy used to access the Twitter Streaming API. It allows us to retrieve tweets in real time.
-
+    # tweepy.StreamListener is a class provided by tweepy used to access the Twitter Streaming API. It allows us to retrieve tweets in real time.
 
     def on_connect(self):
         print("You're connected to the streaming server.")
@@ -24,12 +23,11 @@ class StreamListener(tweepy.StreamListener):
         print('Error: ' + repr(status_code))
         return False
 
-
     def on_data(self, data):
         client = MongoClient('localhost', 27017)
 
         # Use cooldb database
-        db = client.cooldb
+        db = client.user
 
         # Decode JSON
         datajson = json.loads(data)
@@ -39,12 +37,15 @@ class StreamListener(tweepy.StreamListener):
             # Store tweet info into the cooltweets collection.
             db.cooltweets.insert(datajson)
 
+
 # This is a manually created filed where I stored my OAuth credentials for Twitter.
 # Each line is a key-value pair of the form: KEY_NAME:KEY
-CREDENTIALS_PATH = 'C:/Users/Finbar/Desktop/twitter_keys/keys.txt'
+# CREDENTIALS_PATH = 'C:/Users/Finbar/Desktop/twitter_keys/keys.txt'
+CREDENTIALS_PATH = 'C:/Users/t00175569/Desktop/twitter_keys/keys.txt'
 
 # Path to the list of Spanish stop words.
-STOPWORDS_ES_PATH = 'C:/Users/Finbar/Desktop/twitter_keys/keywords.txt'
+# STOPWORDS_ES_PATH = 'C:/Users/Finbar/Desktop/twitter_keys/keywords.txt'
+STOPWORDS_ES_PATH = 'C:/Users/t00175569/Desktop/twitter_keys/keywords.txt'
 
 CONSUMER_KEY = ""
 CONSUMER_SECRET = ""
