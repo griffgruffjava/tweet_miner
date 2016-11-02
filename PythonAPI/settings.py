@@ -17,8 +17,7 @@ DOMAIN = {
                 'unique': True
             },
             'screen_name': {
-                'type': 'string',
-                'unique': True
+                'type': 'string'
             }
         }
     }
@@ -30,4 +29,6 @@ DOMAIN = {
 #
 # MONGO_DBNAME = 'cooldb'
 
-RESOURCE_METHODS = ['GET', 'POST']
+RESOURCE_METHODS = ['GET', 'POST', 'DELETE']
+
+ITEM_METHODS = ['GET', 'PATCH', 'PUT', 'DELETE']
