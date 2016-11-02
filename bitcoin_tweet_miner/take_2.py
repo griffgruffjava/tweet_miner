@@ -35,7 +35,7 @@ class StreamListener(tweepy.StreamListener):
         # We only want to store tweets in English
         if "lang" in datajson and datajson["lang"] == "en":
             # Store tweet info into the cooltweets collection.
-            db.user.insert(datajson)
+            db.cooltweets.insert(datajson)
 
 
 # This is a manually created filed where I stored my OAuth credentials for Twitter.

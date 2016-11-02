@@ -7,24 +7,20 @@ MONGO_PORT = os.environ.get('MONGO_PORT', 27017)
 
 DOMAIN = {
     'cooltweets': {
-        # 'schema': {
-        #     'firstname': {
-        #         'type': 'string'
-        #     },
-        #     'lastname': {
-        #         'type': 'string'
-        #     },
-        #     'username': {
-        #         'type': 'string',
-        #          'unique': True
-        #     },
-        #     'password': {
-        #         'type': 'string'
-        #     },
-        #     'phone': {
-        #         'type': 'string'
-        #     }
-        # }
+        'schema': {
+            'text': {
+                'type': 'string',
+                'maxlength': 140,
+            },
+            'id': {
+                'type': 'number',
+                'unique': True
+            },
+            'screen_name': {
+                'type': 'string',
+                'unique': True
+            }
+        }
     }
 }
 
@@ -34,4 +30,4 @@ DOMAIN = {
 #
 # MONGO_DBNAME = 'cooldb'
 
-RESOURCE_METHODS = ['GET']
+RESOURCE_METHODS = ['GET', 'POST']

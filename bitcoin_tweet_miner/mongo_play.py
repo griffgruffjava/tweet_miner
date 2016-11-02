@@ -20,7 +20,7 @@ print db
 
 collection = db.cooltweets
 
-print collection.count()
+print " count is " + (str)(collection.count())
 
 tweets_iterator = collection.find()
 
