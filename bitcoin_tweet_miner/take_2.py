@@ -31,6 +31,15 @@ class StreamListener(tweepy.StreamListener):
 
         # Decode JSON
         datajson = json.loads(data)
+        # text = datajson["text"]
+        #
+        # # print text
+        # word = "trump"
+        # if word in text.lower():
+        #     datajson ['trump_mention'] = 1
+        # word = "clinton"
+        # if word in text.lower:
+        #     datajson ['clinton_mention'] = 1
 
         # We only want to store tweets in English
         if "lang" in datajson and datajson["lang"] == "en":

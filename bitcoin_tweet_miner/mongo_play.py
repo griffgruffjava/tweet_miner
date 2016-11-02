@@ -30,24 +30,24 @@ hashtags = []
 
 # for tweet in tweets_iterator:
 #     tweet_text = tweet['text']
-# #     print tweet['text']
+# # #     print tweet['text']
 #     tags = re.findall(r"#(\w+)", tweet_text)
 #     for tag in tags:
 #         add_to_list(str(tag))
-
-counted = {}
-[counted.__setitem__(item, 1+counted.get(item, 0)) for item in hashtags]
-
-sorted_counted = sorted(counted.items(), key=operator.itemgetter(1)) #http://stackoverflow.com/questions/613183/sort-a-python-dictionary-by-value
-
-
+#
+# counted = {}
+# [counted.__setitem__(item, 1+counted.get(item, 0)) for item in hashtags]
+#
+# sorted_counted = sorted(counted.items(), key=operator.itemgetter(1)) #http://stackoverflow.com/questions/613183/sort-a-python-dictionary-by-value
+#
+#
 # print sorted_counted
 # for item in sorted_counted:
 #     print item
-# for key, value in sorted_counted.items():
-#     print (key, value)
-
-
-
-
+# # for key, value in sorted_counted.items():
+# #     print (key, value)
+#
+#
+#
+#
 # print len(counted)
