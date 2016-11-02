@@ -27,7 +27,7 @@ class StreamListener(tweepy.StreamListener):
         client = MongoClient('localhost', 27017)
 
         # Use cooldb database
-        db = client.user
+        db = client.eve
 
         # Decode JSON
         datajson = json.loads(data)
@@ -35,7 +35,7 @@ class StreamListener(tweepy.StreamListener):
         # We only want to store tweets in English
         if "lang" in datajson and datajson["lang"] == "en":
             # Store tweet info into the cooltweets collection.
-            db.cooltweets.insert(datajson)
+            db.user.insert(datajson)
 
 
 # This is a manually created filed where I stored my OAuth credentials for Twitter.
